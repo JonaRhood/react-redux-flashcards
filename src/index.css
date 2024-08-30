@@ -144,6 +144,11 @@ option {
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   padding: 26px 20px;
+  transition: ease all .2s;
+}
+
+.topic:hover {
+  background-color: rgb(255, 248, 238);
 }
 
 .topic-container {
@@ -172,6 +177,8 @@ li:not(:last-child) {
   margin-bottom: 20px;
 }
 
+
+
 .topic-icon {
   width: 40px;
   display: block;
@@ -193,6 +200,7 @@ li:not(:last-child) {
   display: flex;
   justify-content: flex-start;
   width: 25rem;
+  height: 8rem;
   align-items: center;
   font-weight: bold;
   font-size: 1rem;
@@ -201,9 +209,43 @@ li:not(:last-child) {
   background: #ffffff;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
-  text-align: center;
   margin: 0 !important;
   text-decoration: none;
+  transition: ease all .2s;
+}
+
+.quiz div {
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.quiz div div {
+  display: flex;
+  flex-direction: row;
+}
+
+.quiz:hover {
+  background-color: rgb(255, 248, 238);
+}
+
+.quiz h3, h4, p {
+  text-align: left;
+  margin: 0 0 4% 0;  
+}
+
+.quiz p {
+  margin-right: 2%;
+  font-weight: normal;
+}
+
+.quiz h4 {
+  text-decoration: underline;
+}
+
+.quiz h4:hover {
+  color: gray;
 }
 
 .quiz > a {
@@ -228,7 +270,12 @@ li:not(:last-child) {
   color: white;
   padding: 73px 44px;
   width: 100%;
-  transition: ease all .4s
+  transition: ease all .2s;
+  font-size: 1.1rem;
+}
+
+.card:hover {
+  background: #9083e1;
 }
 
 .cardFlipped {
@@ -238,5 +285,10 @@ li:not(:last-child) {
   color: white;
   padding: 73px 44px;
   width: 100%;
-  transition: ease all .4s
+  transition: ease all .2s;
+  font-size: 1.2rem;
+}
+
+.cardFlipped:hover {
+  background: #bc40ff;
 }

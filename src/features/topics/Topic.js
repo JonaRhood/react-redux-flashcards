@@ -7,14 +7,14 @@ import { selectQuizzes } from "../quizzes/quizzesSlice";
 import { selectTopics } from "./topicsSlice";
 
 export default function Topic() {
-  const topics = {};  useSelector(selectTopics)
-  const quizzes = {}; useSelector(selectQuizzes)
+  const topics = useSelector(selectTopics)
+  const quizzes = useSelector(selectQuizzes)
   const { topicId } = useParams();
   const topic = topics[topicId];
 
-  if(!topic) {
-    return <Navigate to={ROUTES.topicsRoute()} replace/>
-  }
+  // if(!topic) {
+  //   return <Navigate to={ROUTES.topicsRoute()} replace/>
+  // }
   
   const quizzesForTopic = topic.quizIds.map((quizId) => quizzes[quizId]);
 

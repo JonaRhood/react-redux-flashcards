@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
+import { Navigate } from "react-router-dom";
 // import quiz selector
 import { selectQuizzes } from "./quizzesSlice";
 
@@ -14,10 +15,16 @@ export default function Quizzes() {
       <h1>Quizzes</h1>
       <ul className="quizzes-list">
         {Object.values(quizzes).map((quiz) => (
-          <Link key={quiz.id} to={ROUTES.quizRoute(quiz.id)}>
+          <Link key={quiz.id} to={ROUTES.quizRoute(quiz.id)} style={{textDecoration: 'none'}}>
             <li className="quiz">
               <img src={quiz.icon} />
-              <p>{quiz.name}</p>
+              <div>
+                <h3>{quiz.name}</h3>
+                <div>
+                  <p>Topic:</p>
+                  <Link to={ROUTES.topicsRoute()}><h4>{quiz.topicName}</h4></Link>
+                </div>
+              </div>
             </li>
           </Link>
         ))}

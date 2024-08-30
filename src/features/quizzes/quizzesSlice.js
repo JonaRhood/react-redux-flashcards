@@ -10,7 +10,8 @@ export const quizzesSlice = createSlice({
               name: 'Fantasy World Trivia',
               topicId: 'example 2',
               cardIds: ['fantasy1', 'fantasy2', 'fantasy3', 'fantasy4'],
-              icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg'
+              icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
+              topicName: 'Fantasy'
             },
             'example quiz nature': {
                 id: 'example quiz nature',
@@ -18,6 +19,7 @@ export const quizzesSlice = createSlice({
                 topicId: 'example 2',
                 cardIds: ['nature1', 'nature2', 'nature3', 'nature4'],
                 icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
+                topicName: 'Nature'
             },
             'example quiz society': {
                 id: 'example quiz society',
@@ -25,19 +27,21 @@ export const quizzesSlice = createSlice({
                 topicId: 'example 2',
                 cardIds: ['society1', 'society2', 'society3', 'society4'],
                 icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
+                topicName: 'Society'
             },
 
         }
     },
     reducers: {
         addQuiz: (state, action) => {
-            const { id, name, topicId, cardIds, icon } = action.payload;
+            const { id, name, topicId, cardIds, icon, topicName } = action.payload;
             state.quizzes[id] = {
                 id,
                 name,
                 topicId,
                 cardIds,
-                icon
+                icon,
+                topicName
             }
         }
     }

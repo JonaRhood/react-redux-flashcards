@@ -37,7 +37,7 @@ export default function NewQuizForm() {
     const quizId = uuidv4();
 
     // dispatch add quiz action 
-    dispatch(addQuiz({id: quizId, name, topicId, cardIds, icon: topics[topicId].icon}));
+    dispatch(addQuiz({id: quizId, name, topicId, cardIds, icon: topics[topicId].icon, topicName: topics[topicId].name}));
 
     navigate(ROUTES.quizzesRoute())
   };
