@@ -183,17 +183,24 @@ li:not(:last-child) {
   padding: 0;
   display: flex;
   gap: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .quiz {
+  display: flex;
+  justify-content: flex-start;
+  width: 25rem;
+  align-items: center;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1rem;
   color: #000000;
-  padding: 25px 6px;
+  padding: 5%;
   background: #ffffff;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
-  width: 88px;
   text-align: center;
   margin: 0 !important;
   text-decoration: none;
@@ -202,6 +209,11 @@ li:not(:last-child) {
 .quiz > a {
   text-decoration: none;
   color: #000000;
+}
+
+.quiz img {
+  width: 15%;
+  margin: 0 5% 0 0;
 }
 
 .cards-list {
