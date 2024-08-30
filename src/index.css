@@ -210,10 +210,21 @@ li:not(:last-child) {
 }
 
 .card {
+  background: #8578d4;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  padding: 73px 44px;
+  width: 100%;
+  transition: ease all .4s
+}
+
+.cardFlipped {
   background: #b736ff;
   border-radius: 4px;
   border: none;
   color: white;
   padding: 73px 44px;
   width: 100%;
+  transition: ease all .4s
 }

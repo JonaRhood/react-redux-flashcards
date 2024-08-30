@@ -20,9 +20,9 @@ export const topicsSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(addQuiz, (state, action) => {
-            const { quizId, name, topicId, cardIds } = action.payload;
+            const { id, name, topicId, cardIds } = action.payload;
             if (state.topics[topicId]) {
-                state.topics[topicId].quizIds.push(quizId);
+                state.topics[topicId].quizIds.push(id);
             }
         })
     }
