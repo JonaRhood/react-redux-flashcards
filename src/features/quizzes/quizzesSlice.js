@@ -29,7 +29,6 @@ export const quizzesSlice = createSlice({
                 icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
                 topicName: 'Society'
             },
-
         }
     },
     reducers: {
