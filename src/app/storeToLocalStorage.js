@@ -1,4 +1,4 @@
-import { toJS, isImmutable } from 'immutable';
+import { isImmutable } from 'immutable';
 
 
 export const loadState = () => {
