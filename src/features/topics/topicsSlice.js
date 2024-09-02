@@ -21,7 +21,7 @@ export const topicsSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(addQuiz, (state, action) => {
-            const { id, name, topicId, cardIds } = action.payload;
+            const {name, topicId} = action.payload;
             if (state.topics[topicId]) {
                 state.topics[topicId].quizIds.push(name);
             }
