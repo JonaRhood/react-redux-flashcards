@@ -220,7 +220,6 @@ li:not(:last-child) {
   font-weight: bold;
   font-size: 1rem;
   color: #000000;
-  padding: 5%;
   background: #ffffff;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
@@ -318,4 +317,30 @@ li:not(:last-child) {
 
 #h3Topic {
   margin: 0;
+}
+
+#divQuiz {
+  display: flex;
+  width: 100%;
+  height: 100;
+  position: relative;
+}
+
+#divQuizImgName {
+  height: 125px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+#divQuizTopic {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+
+  p {
+    margin: 0;
+  }
 }

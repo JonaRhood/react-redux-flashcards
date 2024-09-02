@@ -12,11 +12,15 @@ import Quiz from "../features/quizzes/Quiz";
 import Quizzes from "../features/quizzes/Quizzes";
 import AppLayout from "./AppLayout";
 
+import ROUTES from "./routes";
+import { Navigate } from "react-router-dom";
+
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AppLayout />}>
+          <Route index element={<Navigate to={ROUTES.quizzesRoute()} replace />} />
           <Route path="topics" element={<Topics />} />
           <Route path="topics/new" element={<NewTopicForm />} />
           <Route path="topics/:topicId" element={<Topic />} />
