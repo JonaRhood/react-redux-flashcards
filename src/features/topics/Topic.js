@@ -25,7 +25,7 @@ export default function Topic() {
         {quizzesForTopic.map((quiz) => (
           <Link key={quiz.id} to={ROUTES.quizRoute(quiz.name)} style={{ textDecoration: 'none' }}>
             <li className="quiz" key={quiz.id}>
-              <img src={topic.icon} alt="" />
+              <img alt={topic.name} src={topic.icon} />
               <h3 id="h3Topic">{quiz.name}</h3>
             </li>
           </Link>

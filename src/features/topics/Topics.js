@@ -17,7 +17,7 @@ export default function Topics() {
           <Link key={topic.id} to={ROUTES.topicRoute(topic.name)} className="topic-link">
             <li className="topic" key={topic.id}>
               <div className="topic-container">
-                <img src={topic.icon} alt="" />
+                <img alt={topic.name} src={topic.icon} />
                 <div className="text-content">
                   <h2>{topic.name}</h2>
                   <p>{topic.quizIds.length} Quizzes</p>
