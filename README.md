@@ -23,7 +23,7 @@ This project is a React-based web application I developed as part of **<a href="
 ## 📋 &nbsp; Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Project Features and Enhancements](#features)
+2. [Features and Enhancements](#features)
 3. [Installation](#installation)
 4. [Technologies Used](#technologies-used)
 5. [Contact](#contact)
@@ -37,7 +37,7 @@ The primary objective of this project was to create a React-based web applicatio
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💿 &nbsp; <a id="features">Project Features and Enhancements</a>
+## 💿 &nbsp; <a id="features">Features and Enhancements</a>
 
 - [x] **Topic Creation:** Provide a form for users to add new topics, including a name and an icon, allowing for easy organization of quizzes by category.
 - [x] **Quiz Creation:** Allow users to create new quizzes within selected topics, including naming the quiz and associating it with the relevant topic for better categorization.
@@ -97,7 +97,7 @@ Jonathan Cano -  jonathancanofreta@gmail.com
 [linkedin-url]: https://www.linkedin.com/in/jonathancanocalduch
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Redux.js]: https://img.shields.io/badge/Redux-3a3e6c?style=for-the-badge&logo=redux&logoColor=violet
+[Redux.js]: https://img.shields.io/badge/Redux-2d1f09?style=for-the-badge&logo=redux&logoColor=violet
 [Redux-url]: https://redux.js.org/
 [Reactrouter.js]: https://img.shields.io/badge/React%20router-20232A?style=for-the-badge&logo=reactrouter&logoColor=white
 [Reactrouter-url]: https://reactrouter.com/
