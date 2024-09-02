@@ -72,7 +72,7 @@ npm start
 ## ⚙️ &nbsp; <a id="technologies-used">Technologies Used</a>
 
 [![REACT][REACT.js]][REACT-url]
-![REDUX][REDUX.js]][REDUX-url]
+[![REDUX][REDUX.js]][REDUX-url]
 [![REACT ROUTER][REACTROUTER.js]][REACTROUTER-url]
 [![JAVASCRIPT][JAVASCRIPT.js]][JAVASCRIPT-url]
 [![CSS][CSS.js]][CSS-url]
