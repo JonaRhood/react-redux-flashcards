@@ -39,14 +39,14 @@ The primary objective of this project was to create a React-based web applicatio
 
 ## 💿 &nbsp; <a id="features">Features and Enhancements</a>
 
-- [x] **Topic Creation:** Provide a form for users to add new topics, including a name and an icon, allowing for easy organization of quizzes by category.
-- [x] **Quiz Creation:** Allow users to create new quizzes within selected topics, including naming the quiz and associating it with the relevant topic for better categorization.
-- [x] **Flashcard Management:** Enable users to add flashcards to quizzes, each with a question (front) and answer (back), making it easy to build comprehensive quizzes on various subjects.
-- [x] **Topic Sorting:** Allow users to view and sort quizzes by topic, providing an organized and streamlined way to access specific quizzes based on their interests.
-- [x] **Quiz List:** Display a list of quizzes within each topic, showing details such as the quiz name and associated flashcards, making navigation and selection straightforward.
-- [ ] **Edit and Delete Quizzes:** Enable users to modify or remove quizzes, giving full control over the quiz content and structure.
-- [ ] **Edit and Delete Flashcards:** Allow users to edit or delete individual flashcards within quizzes to keep the content up-to-date and relevant.
-- [ ] **Local Storage:** Automatically save all topics, quizzes, and flashcards in the browser’s Local Storage, ensuring data persistence across sessions without the need for server-side storage.
+- **Topic Creation:** Provide a form for users to add new topics, including a name and an icon, allowing for easy organization of quizzes by category.
+- **Quiz Creation:** Allow users to create new quizzes within selected topics, including naming the quiz and associating it with the relevant topic for better categorization.
+- **Flashcard Management:** Enable users to add flashcards to quizzes, each with a question (front) and answer (back), making it easy to build comprehensive quizzes on various subjects.
+- **Topic Sorting:** Allow users to view and sort quizzes by topic, providing an organized and streamlined way to access specific quizzes based on their interests.
+- **Quiz List:** Display a list of quizzes within each topic, showing details such as the quiz name and associated flashcards, making navigation and selection straightforward.
+- **Edit and Delete Quizzes:** Enable users to modify or remove quizzes, giving full control over the quiz content and structure.
+- **Edit and Delete Flashcards:** Allow users to edit or delete individual flashcards within quizzes to keep the content up-to-date and relevant.
+- **Local Storage:** Automatically save all topics, quizzes, and flashcards in the browser’s Local Storage, ensuring data persistence across sessions without the need for server-side storage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
