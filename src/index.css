@@ -337,7 +337,7 @@ li:not(:last-child) {
 #divQuizTopic {
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: 2%;
   right: 2%;
 
   p {
