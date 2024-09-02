@@ -21,7 +21,7 @@ export default function Quizzes() {
                 <h3>{quiz.name}</h3>
                 <div>
                   <p>Topic:</p>
-                  <Link to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
+                  <Link key={quiz.id} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
                 </div>
               </div>
             </li>

@@ -9,7 +9,7 @@ export default function Card({ id }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <li>
+    <li key={id}>
       <button 
       className={`
       ${flipped ? "cardFlipped" : "card"}
