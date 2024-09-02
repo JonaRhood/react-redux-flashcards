@@ -71,13 +71,13 @@ npm start
 
 ## ⚙️ &nbsp; <a id="technologies-used">Technologies Used</a>
 
-* [![REACT][REACT.js]][REACT-url]
-* [![REDUX][REDUX.js]][REDUX-url]
-* [![REACT ROUTER][REACTROUTER.js]][REACTROUTER-url]
-* [![JAVASCRIPT][JAVASCRIPT.js]][JAVASCRIPT-url]
-* [![CSS][CSS.js]][CSS-url]
-* [![HTML5][HTML5.js]][HTML5-url]
-* [![GIT][GIT.js]][GIT-url]
+[![REACT][REACT.js]][REACT-url]
+![REDUX][REDUX.js]][REDUX-url]
+[![REACT ROUTER][REACTROUTER.js]][REACTROUTER-url]
+[![JAVASCRIPT][JAVASCRIPT.js]][JAVASCRIPT-url]
+[![CSS][CSS.js]][CSS-url]
+[![HTML5][HTML5.js]][HTML5-url]
+[![GIT][GIT.js]][GIT-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
