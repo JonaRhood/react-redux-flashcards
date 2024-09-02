@@ -19,13 +19,14 @@ export default function Quizzes() {
               <img src={quiz.icon} />
               <div>
                 <h3>{quiz.name}</h3>
-                <div>
-                  <p>Topic:</p>
-                  <Link key={quiz.id} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
-                </div>
+                
               </div>
             </li>
           </Link>
+        //   <div>
+        //   <p>Topic:</p>
+        //   <Link key={quiz.id} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
+        // </div>
         ))}
       </ul>
       <Link to={ROUTES.newQuizRoute()} className="button">
