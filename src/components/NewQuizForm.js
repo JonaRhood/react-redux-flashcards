@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import ROUTES from "../app/routes";
+import Swal from "sweetalert2";
 // import selectors
 import { selectTopics } from "../features/topics/topicsSlice";
+import { selectQuizzes } from "../features/quizzes/quizzesSlice";
 
 import { addQuiz } from "../features/quizzes/quizzesSlice";
 import { addCard } from "../features/cards/cardsSlice";
@@ -15,16 +17,41 @@ export default function NewQuizForm() {
   const [topicId, setTopicId] = useState("");
   const navigate = useNavigate();
   const topics = useSelector(selectTopics);
+  const quizzes = useSelector(selectQuizzes);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (name.length === 0) {
+      Swal.fire({
+        title: "Name your new Quizz",
+        input: "text",
+        inputLabel: "Quizz Name:",
+        icon: "warning",
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return "You need to write something!";
+          } else if (value) {
+            setName(value);
+          }
+        }
+      });
+      return;
+    } else if (!topicId) {
+      Swal.fire({
+        title: "Select a Topic from the List",
+        icon: "warning",
+        showCancelButton: true,
+      });
+      return;
+    } else if (Object.keys(quizzes).includes(name)) {
       return;
     }
 
     const cardIds = [];
-    
+
     // create the new cards here and add each card's id to cardIds
     cards.forEach((card) => {
       const cardId = uuidv4();
@@ -37,7 +64,7 @@ export default function NewQuizForm() {
     const quizId = uuidv4();
 
     // dispatch add quiz action 
-    dispatch(addQuiz({id: quizId, name, topicId, cardIds, icon: topics[topicId].icon, topicName: topics[topicId].name}));
+    dispatch(addQuiz({ id: quizId, name, topicId, cardIds, icon: topics[topicId].icon, topicName: topics[topicId].name }));
 
     navigate(ROUTES.quizzesRoute())
   };
@@ -67,15 +94,17 @@ export default function NewQuizForm() {
           value={name}
           onChange={(e) => setName(e.currentTarget.value)}
           placeholder="Quiz Title"
+          className="webInput"
         />
         <select
           id="quiz-topic"
           onChange={(e) => setTopicId(e.currentTarget.value)}
           placeholder="Topic"
+          className="webSelect"
         >
           <option value="">Topic</option>
           {Object.values(topics).map((topic) => (
-            <option key={topic.id} value={topic.id}>
+            <option key={topic.id} value={topic.name}>
               {topic.name}
             </option>
           ))}
@@ -89,6 +118,7 @@ export default function NewQuizForm() {
                 updateCardState(index, "front", e.currentTarget.value)
               }
               placeholder="Front"
+              className="webInput"
             />
 
             <input
@@ -98,6 +128,7 @@ export default function NewQuizForm() {
                 updateCardState(index, "back", e.currentTarget.value)
               }
               placeholder="Back"
+              className="webInput"
             />
 
             <button

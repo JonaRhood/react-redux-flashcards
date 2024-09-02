@@ -11,7 +11,7 @@ export const topicsSlice = createSlice({
     reducers: {
         addTopic: (state, action) => {
             const { id, name, icon } = action.payload;
-            state.topics[id] = {
+            state.topics[name] = {
                 id,
                 name,
                 icon,
@@ -23,7 +23,7 @@ export const topicsSlice = createSlice({
         builder.addCase(addQuiz, (state, action) => {
             const { id, name, topicId, cardIds } = action.payload;
             if (state.topics[topicId]) {
-                state.topics[topicId].quizIds.push(id);
+                state.topics[topicId].quizIds.push(name);
             }
         })
     }

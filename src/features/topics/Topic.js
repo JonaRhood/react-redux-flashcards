@@ -12,18 +12,18 @@ export default function Topic() {
   const { topicId } = useParams();
   const topic = topics[topicId];
 
-  // if(!topic) {
-  //   return <Navigate to={ROUTES.topicsRoute()} replace/>
-  // }
+  if (!topic) {
+    return <Navigate to={ROUTES.topicsRoute()} replace />
+  }
 
   const quizzesForTopic = topic.quizIds.map((quizId) => quizzes[quizId]);
-
+  console.log(topic.quizIds)
   return (
     <section>
       <h1>{topic.name}</h1>
       <ul className="quizzes-list">
         {quizzesForTopic.map((quiz) => (
-          <Link to={ROUTES.quizRoute(quiz.id)} style={{textDecoration: 'none'}}>
+          <Link to={ROUTES.quizRoute(quiz.name)} style={{ textDecoration: 'none' }}>
             <li className="quiz" key={quiz.id}>
               <img src={topic.icon} alt="" />
               <h3 id="h3Topic">{quiz.name}</h3>

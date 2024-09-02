@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTopics } from "../features/topics/topicsSlice";
 import {useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import ROUTES from "../app/routes";
 import { ALL_ICONS } from "../data/icons";
+import Swal from "sweetalert2";
 // import addTopic
 import { addTopic } from "../features/topics/topicsSlice";
 
 export default function NewTopicForm() {
+  const topics = useSelector(selectTopics);
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [icon, setIcon] = useState("");
@@ -16,6 +19,43 @@ export default function NewTopicForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.length === 0) {
+      Swal.fire({
+        title: "Name your new Quizz",
+        input: "text",
+        inputLabel: "Quizz Name:",
+        icon: "warning",
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return "You need to write something!";
+          } else if (value) {
+            setName(value);
+          }
+        }
+      });
+      return;
+    } else if (Object.keys(topics).includes(name)) {
+      Swal.fire({
+        title: "Topic Already Exists",
+        input: "text",
+        inputLabel: "New Topic Name:",
+        icon: "warning",
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return "You need to write something!";
+          } else if (value) {
+            setName(value);
+          }
+        }
+      });
+      return;
+    } else if (!icon) {
+      Swal.fire({
+        title: "Select an Icon from the List",
+        icon: "warning",
+        showCancelButton: true,
+      });
       return;
     }
 
@@ -39,11 +79,13 @@ export default function NewTopicForm() {
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
             placeholder="Topic Name"
+            className="webInput"
           />
           <select
             onChange={(e) => setIcon(e.currentTarget.value)}
             required
             defaultValue="default"
+            className="webSelect"
           >
             <option value="default" disabled hidden>
               Choose an icon

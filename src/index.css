@@ -85,13 +85,14 @@ section {
   padding: 20px 16px;
 }
 
-input,
-select {
+.webInput,
+.webSelect {
   background: #ffffff;
   border: 1px solid #979797;
   border-radius: 3px;
   padding: 8px 10px;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   margin-bottom: 16px;
 }
 

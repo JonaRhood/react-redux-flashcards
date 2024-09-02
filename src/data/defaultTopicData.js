@@ -4,10 +4,10 @@ const topics = {
         name: 'Fantasy',
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
         quizIds: [
-            'example quiz fantasy', 
-            'fantasy quiz adventure', 
-            'fantasy creatures quiz', 
-            'fantasy realms quiz'
+            'Fantasy World Trivia', 
+            'Fantasy Adventure Quiz', 
+            'Fantasy Creatures Quiz', 
+            'Fantasy Realms Quiz'
         ]
     },
     'Nature': {
@@ -15,10 +15,10 @@ const topics = {
         name: 'Nature',
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
         quizIds: [
-            'example quiz nature', 
-            'nature landscapes quiz', 
-            'wildlife quiz', 
-            'nature secrets quiz'
+            'Nature Wonders Quiz', 
+            'Nature Landscapes Quiz', 
+            'Wildlife Quiz', 
+            'Nature Secrets Quiz'
         ]
     },
     'Society': {
@@ -26,10 +26,10 @@ const topics = {
         name: 'Society',
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
         quizIds: [
-            'example quiz society', 
-            'society and culture quiz', 
-            'human behavior quiz', 
-            'social norms quiz'
+            'Social Dynamics Quiz', 
+            'Society and Culture Quiz', 
+            'Human Behavior Quiz', 
+            'Social Norms Quiz'
         ]
     }
 };

@@ -14,7 +14,7 @@ export default function Quizzes() {
       <h1>Quizzes</h1>
       <ul className="quizzes-list">
         {Object.values(quizzes).map((quiz) => (
-          <Link key={quiz.id} to={ROUTES.quizRoute(quiz.id)} style={{textDecoration: 'none', color: 'inherit'}}>
+          <Link key={quiz.id} to={ROUTES.quizRoute(quiz.name)} style={{textDecoration: 'none', color: 'inherit'}}>
             <li className="quiz">
               <img src={quiz.icon} />
               <div>
