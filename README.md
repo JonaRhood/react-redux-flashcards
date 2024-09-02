@@ -97,9 +97,9 @@ Jonathan Cano -  jonathancanofreta@gmail.com
 [linkedin-url]: https://www.linkedin.com/in/jonathancanocalduch
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Redux.js]: https://img.shields.io/badge/Redux-2d1f09?style=for-the-badge&logo=redux&logoColor=violet
+[Redux.js]: https://img.shields.io/badge/Redux-3a3e6c?style=for-the-badge&logo=redux&logoColor=violet
 [Redux-url]: https://redux.js.org/
-[Reactrouter.js]: https://img.shields.io/badge/React%20router-20232A?style=for-the-badge&logo=reactrouter&logoColor=white
+[Reactrouter.js]: https://img.shields.io/badge/React%20router-2d1f09?style=for-the-badge&logo=reactrouter&logoColor=white
 [Reactrouter-url]: https://reactrouter.com/
 [Javascript.js]: https://img.shields.io/badge/Javascript-3b473e?style=for-the-badge&logo=JavaScript&logoColor=Y
 [Javascript-url]: https://developer.mozilla.org/es/docs/Web/JavaScript
