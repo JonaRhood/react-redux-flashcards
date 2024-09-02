@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: black;
+}
+
 html,
 body {
   margin: 0;
@@ -12,6 +16,8 @@ nav {
   background: #b736ff;
   display: flex;
   padding: 24px 36px;
+  position: fixed;
+  width: 100%;
 }
 
 nav ul {
@@ -35,6 +41,10 @@ nav a {
 
 nav a.active {
   font-weight: bold;
+}
+
+#divOutlet {
+  padding-top:  80px;
 }
 
 h1 {

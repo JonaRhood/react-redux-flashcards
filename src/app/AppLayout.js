@@ -6,28 +6,32 @@ import ROUTES from "./routes";
 export default function AppLayout() {
     return (
         <div>
-            <nav>
-                <ul>
-                <li>
-                    <NavLink to={ROUTES.topicsRoute()} >
-                    Topics
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to={ROUTES.quizzesRoute()} >
-                    Quizzes
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to={ROUTES.newQuizRoute()} >
-                    New Quiz
-                    </NavLink>
-                </li>
-                </ul>
-            </nav>
-            <Outlet/>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <NavLink to={ROUTES.topicsRoute()} >
+                                Topics
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={ROUTES.quizzesRoute()} >
+                                Quizzes
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={ROUTES.newQuizRoute()} >
+                                New Quiz
+                            </NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="divOutlet">
+                <Outlet />
+            </div>
         </div>
-      
+
 
     );
 }

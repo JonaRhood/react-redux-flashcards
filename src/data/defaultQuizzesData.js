@@ -1,12 +1,4 @@
 const quizzes = {
-    'example quiz fantasy': {
-        id: 'example quiz fantasy',
-        name: 'Fantasy World Trivia',
-        topicId: 'example 2',
-        cardIds: ['fantasy1', 'fantasy2', 'fantasy3', 'fantasy4'],
-        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
-        topicName: 'Fantasy'
-    },
     'example quiz society': {
         id: 'example quiz society',
         name: 'Social Dynamics Quiz',
@@ -14,6 +6,14 @@ const quizzes = {
         cardIds: ['society1', 'society2', 'society3', 'society4'],
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
         topicName: 'Society'
+    },
+    'example quiz fantasy': {
+        id: 'example quiz fantasy',
+        name: 'Fantasy World Trivia',
+        topicId: 'example 2',
+        cardIds: ['fantasy1', 'fantasy2', 'fantasy3', 'fantasy4'],
+        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
+        topicName: 'Fantasy'
     },
     'example quiz nature': {
         id: 'example quiz nature',
@@ -23,14 +23,6 @@ const quizzes = {
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
         topicName: 'Nature'
     },
-    'fantasy quiz adventure': {
-        id: 'fantasy quiz adventure',
-        name: 'Fantasy Adventure Quiz',
-        topicId: 'example 2',
-        cardIds: ['fantasy5', 'fantasy6', 'fantasy7', 'fantasy8'],
-        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
-        topicName: 'Fantasy'
-    },
     'society and culture quiz': {
         id: 'society and culture quiz',
         name: 'Society and Culture Quiz',
@@ -39,14 +31,13 @@ const quizzes = {
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
         topicName: 'Society'
     },
-    // More Nature Quizzes
-    'nature landscapes quiz': {
-        id: 'nature landscapes quiz',
-        name: 'Nature Landscapes Quiz',
+    'fantasy quiz adventure': {
+        id: 'fantasy quiz adventure',
+        name: 'Fantasy Adventure Quiz',
         topicId: 'example 2',
-        cardIds: ['nature5', 'nature6', 'nature7', 'nature8'],
-        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
-        topicName: 'Nature'
+        cardIds: ['fantasy5', 'fantasy6', 'fantasy7', 'fantasy8'],
+        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
+        topicName: 'Fantasy'
     },
     'fantasy creatures quiz': {
         id: 'fantasy creatures quiz',
@@ -56,6 +47,14 @@ const quizzes = {
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
         topicName: 'Fantasy'
     },
+    'nature landscapes quiz': {
+        id: 'nature landscapes quiz',
+        name: 'Nature Landscapes Quiz',
+        topicId: 'example 2',
+        cardIds: ['nature5', 'nature6', 'nature7', 'nature8'],
+        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
+        topicName: 'Nature'
+    },
     'human behavior quiz': {
         id: 'human behavior quiz',
         name: 'Human Behavior Quiz',
@@ -63,14 +62,6 @@ const quizzes = {
         cardIds: ['society9', 'society10', 'society11', 'society12'],
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
         topicName: 'Society'
-    },
-    'wildlife quiz': {
-        id: 'wildlife quiz',
-        name: 'Wildlife Quiz',
-        topicId: 'example 2',
-        cardIds: ['nature9', 'nature10', 'nature11', 'nature12'],
-        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
-        topicName: 'Nature'
     },
     'fantasy realms quiz': {
         id: 'fantasy realms quiz',
@@ -80,13 +71,13 @@ const quizzes = {
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/spade.svg',
         topicName: 'Fantasy'
     },
-    'social norms quiz': {
-        id: 'social norms quiz',
-        name: 'Social Norms Quiz',
+    'wildlife quiz': {
+        id: 'wildlife quiz',
+        name: 'Wildlife Quiz',
         topicId: 'example 2',
-        cardIds: ['society13', 'society14', 'society15', 'society16'],
-        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
-        topicName: 'Society'
+        cardIds: ['nature9', 'nature10', 'nature11', 'nature12'],
+        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
+        topicName: 'Nature'
     },
     'nature secrets quiz': {
         id: 'nature secrets quiz',
@@ -95,6 +86,14 @@ const quizzes = {
         cardIds: ['nature13', 'nature14', 'nature15', 'nature16'],
         icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/tree.svg',
         topicName: 'Nature'
+    },
+    'social norms quiz': {
+        id: 'social norms quiz',
+        name: 'Social Norms Quiz',
+        topicId: 'example 2',
+        cardIds: ['society13', 'society14', 'society15', 'society16'],
+        icon: 'https://static-assets.codecademy.com/skillpaths/react-redux/redux-quiz-app/statistics.svg',
+        topicName: 'Society'
     },
 };
 
