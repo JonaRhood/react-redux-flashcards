@@ -45,7 +45,7 @@ nav a.active {
 }
 
 #divOutlet {
-  padding-top:  80px;
+  padding-top: 80px;
 }
 
 h1 {
@@ -114,7 +114,7 @@ input::placeholder {
   text-align: center;
 }
 
-section > h1 {
+section>h1 {
   margin: 0;
   margin-bottom: 20px;
   text-align: center;
@@ -178,7 +178,7 @@ option {
   margin-right: 14px;
 }
 
-.text-content > * {
+.text-content>* {
   margin: 0;
 }
 
@@ -187,7 +187,7 @@ option {
   color: #000000;
 }
 
-.text-content > p {
+.text-content>p {
   font-size: 14px;
 }
 
@@ -247,9 +247,11 @@ li:not(:last-child) {
   background-color: rgb(255, 248, 238);
 }
 
-.quiz h3, h4, p {
+.quiz h3,
+h4,
+p {
   text-align: left;
-  margin: 0 0 4% 0;  
+  margin: 0 0 4% 0;
 }
 
 .quiz p {
@@ -270,7 +272,7 @@ li:not(:last-child) {
   color: inherit;
 }
 
-.quiz > a {
+.quiz>a {
   text-decoration: none;
   color: #000000;
 }
@@ -382,4 +384,16 @@ li:not(:last-child) {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+#resetButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#resetButton button {
+  padding: 10px 20px;
+  font-size: 16px;
 }
