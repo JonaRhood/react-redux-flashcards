@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addQuiz } from "../quizzes/quizzesSlice";
+import { addQuiz, removeQuiz } from "../quizzes/quizzesSlice";
 import topics from '../../data/defaultTopicData.js'
 
 // Slice to manage the state of the Topics
@@ -25,14 +25,20 @@ export const topicsSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(addQuiz, (state, action) => {
-            const {name, topicId} = action.payload;
-            if (state.topics[topicId]) {
-                state.topics[topicId].quizIds.push(name);
-            }
-        })
+        builder
+            .addCase(addQuiz, (state, action) => {
+                const { name, topicId } = action.payload;
+                if (state.topics[topicId]) {
+                    state.topics[topicId].quizIds.push(name);
+                }
+            })
+            .addCase(removeQuiz, (state, action) => {
+                const { name } = action.payload;
+                for (const topic of Object.values(state.topics)) {
+                    topic.quizIds = topic.quizIds.filter(quizId => quizId !== name);
+                }
+            });
     }
-
 });
 
 // "topics" object state export
