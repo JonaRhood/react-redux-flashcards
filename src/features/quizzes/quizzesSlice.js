@@ -18,6 +18,10 @@ export const quizzesSlice = createSlice({
                 icon,
                 topicName
             }
+        },
+        removeQuiz: (state, action) => {
+            const { name } = action.payload;
+            delete state.quizzes[name];
         }
     }
 })
