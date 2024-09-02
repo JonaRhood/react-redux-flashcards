@@ -83,8 +83,8 @@ npm start
 
 ## 👤 &nbsp; <a id="contact">Contact</a>
 
-<a href="https://github.com/JonaRhood/react-projects/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=JonaRhood/react-projects" />
+<a href="https://github.com/JonaRhood/react-redux-flashcards/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=JonaRhood/react-redux-flashcards" />
 </a>
 
 [![LinkedIn][linkedin-shield]][linkedin-url] <br />
