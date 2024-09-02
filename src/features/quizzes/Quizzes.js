@@ -1,15 +1,21 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
+import { removeQuiz } from "../../features/quizzes/quizzesSlice"
 // import quiz selector
 import { selectQuizzes } from "./quizzesSlice";
 
 
 export default function Quizzes() {
   const quizzes = useSelector(selectQuizzes);
+  const dispatch = useDispatch();
+
+  const handleDeleteQuiz = (quizName) => {
+    dispatch(removeQuiz({ name: quizName }));
+  }
 
   return (
     <section className="center">
@@ -26,9 +32,9 @@ export default function Quizzes() {
                   </div>
                 </div>
               </Link>
-              <div id="divIcon">
+              <button id="divIcon" onClick={() => handleDeleteQuiz(quiz.name)}>
                 <FontAwesomeIcon icon={faXmark} />
-              </div>
+              </button>
               <div id="divQuizTopic">
                 <p>Topic: &nbsp;</p>
                 <Link key={quiz.topicName} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>

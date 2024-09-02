@@ -3,6 +3,7 @@ import { addQuiz } from "../quizzes/quizzesSlice";
 import topics from '../../data/defaultTopicData.js'
 
 // Slice to manage the state of the Topics
+
 export const topicsSlice = createSlice({
     name: 'topics',
     initialState: {
@@ -18,6 +19,10 @@ export const topicsSlice = createSlice({
                 quizIds: []
             }
         },
+        removeTopic: (state, action) => {
+            const { name } = action.payload
+            delete state.topics[name];
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(addQuiz, (state, action) => {
@@ -34,5 +39,5 @@ export const topicsSlice = createSlice({
 export const selectTopics = (state) => state.topics.topics;
 
 // Action and reducer export
-export const { addTopic, addQuizIdToTopic } = topicsSlice.actions;
+export const { addTopic, addQuizIdToTopic, removeTopic } = topicsSlice.actions;
 export default topicsSlice.reducer;
