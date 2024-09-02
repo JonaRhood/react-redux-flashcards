@@ -36,7 +36,7 @@ export default function NewTopicForm() {
       return;
     } else if (Object.keys(topics).includes(name)) {
       Swal.fire({
-        title: "Topic Already Exists",
+        title: "Topic Name Already Exists",
         input: "text",
         inputLabel: "New Topic Name:",
         icon: "warning",

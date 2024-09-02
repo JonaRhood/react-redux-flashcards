@@ -47,6 +47,27 @@ export default function NewQuizForm() {
       });
       return;
     } else if (Object.keys(quizzes).includes(name)) {
+      Swal.fire({
+        title: "Quiz Name Already Exists",
+        input: "text",
+        inputLabel: "New Quiz Name:",
+        icon: "warning",
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return "You need to write something!";
+          } else if (value) {
+            setName(value);
+          }
+        }
+      });
+      return;
+    } else if (cards.length === 0) {
+      Swal.fire({
+        title: "Add some cards to your quiz",
+        icon: "warning",
+        showCancelButton: true,
+      });
       return;
     }
 
