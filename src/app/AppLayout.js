@@ -1,9 +1,12 @@
 import React from "react";
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useLocation } from "react-router-dom";
 import ROUTES from "./routes";
 import ResetAppButton from "../components/ResetAppButton";
 
 export default function AppLayout() {
+    const location = useLocation();
+    const isNewQuizRoute = location.pathname === ROUTES.newQuizRoute();
+
     return (
         <div>
             <nav>
@@ -28,7 +31,7 @@ export default function AppLayout() {
             <div id="divOutlet">
                 <Outlet />
             </div>
-            <ResetAppButton />
+            {!isNewQuizRoute && <ResetAppButton />}
         </div>
     );
 }
