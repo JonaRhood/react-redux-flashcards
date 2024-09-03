@@ -166,6 +166,10 @@ option {
 
 .topic:hover {
   background-color: rgb(255, 248, 238);
+
+  #divIconTopics {
+    background-color: rgb(255, 248, 238);
+  }
 }
 
 .topic-container {
@@ -245,6 +249,10 @@ li:not(:last-child) {
 
 .quiz:hover {
   background-color: rgb(255, 248, 238);
+
+  #divIcon {
+    background-color: rgb(255, 248, 238);
+  }
 }
 
 .quiz h3,
@@ -352,12 +360,14 @@ p {
 
 #divIcon {
   position: absolute;
-  right: 2%;
-  top: 2%;
-  padding: 0;
+  right: 0;
+  top: 0;
+  padding: 1%;
   margin: 0;
   border: 0;
   color: black;
+  border-radius: 0;
+  transition: ease all .2s;
 }
 
 #divIcon:hover {
@@ -367,12 +377,14 @@ p {
 
 #divIconTopics {
   position: absolute;
-  right: 1%;
-  top: 7%;
+  right: 0;
+  top: 0;
   margin: 0;
-  padding: 0;
+  padding: .5%;
   color: black;
   border: 0;
+  border-radius: 0;
+  transition: ease all .2s;
 }
 
 #divIconTopics:hover {
