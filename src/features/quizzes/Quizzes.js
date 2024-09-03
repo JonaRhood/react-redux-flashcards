@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 import { removeQuiz } from "../../features/quizzes/quizzesSlice"
+import AvatarWithText from "../../components/AvatarWithText";
 // import quiz selector
 import { selectQuizzes } from "./quizzesSlice";
 
@@ -12,6 +13,26 @@ import { selectQuizzes } from "./quizzesSlice";
 export default function Quizzes() {
   const quizzes = useSelector(selectQuizzes);
   const dispatch = useDispatch();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadIcons = Object.values(quizzes).map(quiz => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = quiz.icon;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(loadIcons)
+      .then(() => setLoading(false))
+      .catch(error => {
+        console.error("Error loading icons", error);
+        setLoading(false);
+      })
+  }, [quizzes]);
 
   const handleDeleteQuiz = (quizName) => {
     dispatch(removeQuiz({ name: quizName }));
@@ -23,23 +44,25 @@ export default function Quizzes() {
       <ul className="quizzes-list">
         {Object.values(quizzes).map((quiz) => (
           <li className="quiz" key={quiz.id}>
-            <div id="divQuiz">
-              <Link key={quiz.id} to={ROUTES.quizRoute(quiz.name)} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div id="divQuizImgName">
-                  <img alt={quiz.topicName} src={quiz.icon} />
-                  <div>
-                    <h3>{quiz.name}</h3>
+            {loading ? <div id="divAvatarLoader"><AvatarWithText /></div> :
+              <div id="divQuiz">
+                <Link key={quiz.id} to={ROUTES.quizRoute(quiz.name)} style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div id="divQuizImgName">
+                    <img alt={quiz.topicName} src={quiz.icon} />
+                    <div>
+                      <h3>{quiz.name}</h3>
+                    </div>
                   </div>
+                </Link>
+                <button id="divIcon" onClick={() => handleDeleteQuiz(quiz.name)}>
+                  <FontAwesomeIcon icon={faXmark} />
+                </button>
+                <div id="divQuizTopic">
+                  <p>Topic: &nbsp;</p>
+                  <Link key={quiz.topicName} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
                 </div>
-              </Link>
-              <button id="divIcon" onClick={() => handleDeleteQuiz(quiz.name)}>
-                <FontAwesomeIcon icon={faXmark} />
-              </button>
-              <div id="divQuizTopic">
-                <p>Topic: &nbsp;</p>
-                <Link key={quiz.topicName} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
               </div>
-            </div>
+            }
           </li>
         ))}
       </ul>
