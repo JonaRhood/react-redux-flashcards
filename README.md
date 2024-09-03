@@ -54,7 +54,7 @@ The primary objective of this project was to create a React-based web applicatio
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/JonaRhood/react-appointment-project
+git clone https://github.com/JonaRhood/react-redux-flashcards
 ```
 
 2. Install NPM packages:
