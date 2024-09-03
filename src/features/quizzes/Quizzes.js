@@ -62,7 +62,7 @@ export default function Quizzes() {
                   {loading ? <Skeleton circle width="14px" containerClassName="avatar-skeleton" /> : <FontAwesomeIcon icon={faXmark} />}
                 </button>
                 <div id="divQuizTopic">
-                  <p>{loading ? <Skeleton width={100} /> : "Topic: &nbsp;"}</p>
+                  <p>{loading ? <Skeleton width={100} /> : 'Topic:'}&nbsp;</p>
                   <Link key={quiz.topicName} to={ROUTES.topicRoute(quiz.topicName)}><h4>{loading ? <Skeleton /> : quiz.topicName}</h4></Link>
                 </div>
               </div>
