@@ -150,7 +150,6 @@ option {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 12px;
   flex-direction: column;
   width: 100%;
 }
@@ -159,7 +158,6 @@ option {
   background: #ffffff;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
-  padding: 26px 20px;
   transition: ease all .2s;
   position: relative;
 }
@@ -175,6 +173,10 @@ option {
 .topic-container {
   display: flex;
   position: relative;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  padding-left: 2%;
 }
 
 .topic img {
@@ -396,6 +398,8 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 3%;
+  height: 129px;
 }
 
 #resetButton {
