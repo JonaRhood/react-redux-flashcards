@@ -21,7 +21,7 @@ export default function Topics() {
     const loadIcons = Object.values(topics).map(topic => {
       return new Promise((resolve, reject) => {
         const img = new Image();
-        img.src = topics.icon
+        img.src = topic.icon
         img.onload = resolve;
         img.onerror = reject;
       });
@@ -33,7 +33,6 @@ export default function Topics() {
         console.error('Error loading icons', error);
         setLoading(false);
       })
-
   }, [topics])
 
   const handleRemoveTopic = async (nameTopic) => {
