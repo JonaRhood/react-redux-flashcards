@@ -372,6 +372,20 @@ p {
   transition: ease all .2s;
 }
 
+.avatar-skeleton {
+  width: 70px;
+  height: 70px;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.avatar-skeleton-topic {
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  margin-right: 10px;
+}
+
 #divIcon:hover {
   color: red;
   cursor: pointer;

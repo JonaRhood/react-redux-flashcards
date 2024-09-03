@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 import { removeQuiz } from "../../features/quizzes/quizzesSlice"
-import AvatarWithText from "../../components/AvatarWithText";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css';
 // import quiz selector
 import { selectQuizzes } from "./quizzesSlice";
 
@@ -44,25 +45,27 @@ export default function Quizzes() {
       <ul className="quizzes-list">
         {Object.values(quizzes).map((quiz) => (
           <li className="quiz" key={quiz.id}>
-            {loading ? <div id="divAvatarLoader"><AvatarWithText /></div> :
               <div id="divQuiz">
                 <Link key={quiz.id} to={ROUTES.quizRoute(quiz.name)} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div id="divQuizImgName">
-                    <img alt={quiz.topicName} src={quiz.icon} />
+                    {loading ? <Skeleton
+                      circle
+                      height="100%"
+                      containerClassName="avatar-skeleton"
+                    /> : <img alt={quiz.topicName} src={quiz.icon} />}
                     <div>
-                      <h3>{quiz.name}</h3>
+                      <h3>{loading ? <Skeleton width={220} /> : quiz.name}</h3>
                     </div>
                   </div>
                 </Link>
                 <button id="divIcon" onClick={() => handleDeleteQuiz(quiz.name)}>
-                  <FontAwesomeIcon icon={faXmark} />
+                  {loading ? <Skeleton circle width="14px" containerClassName="avatar-skeleton" /> : <FontAwesomeIcon icon={faXmark} />}
                 </button>
                 <div id="divQuizTopic">
-                  <p>Topic: &nbsp;</p>
-                  <Link key={quiz.topicName} to={ROUTES.topicRoute(quiz.topicName)}><h4>{quiz.topicName}</h4></Link>
+                  <p>{loading ? <Skeleton width={100} /> : "Topic: &nbsp;"}</p>
+                  <Link key={quiz.topicName} to={ROUTES.topicRoute(quiz.topicName)}><h4>{loading ? <Skeleton /> : quiz.topicName}</h4></Link>
                 </div>
               </div>
-            }
           </li>
         ))}
       </ul>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import AvatarWithText from "../../components/AvatarWithText";
+import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css';
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,22 +57,24 @@ export default function Topics() {
       <ul className="topics-list">
         {Object.values(topics).map((topic) => (
           <li className="topic" key={topic.id}>
-            {loading ? <div id="divAvatarLoaderTopic"><div id="nestedAvatarLoaderTopic"><AvatarWithText /></div></div> :
               <div>
                 <Link key={topic.id} to={ROUTES.topicRoute(topic.name)} className="topic-link">
                   <div className="topic-container">
-                    <img alt={topic.name} src={topic.icon} />
+                    {loading ? <Skeleton
+                      circle
+                      height="100%"
+                      containerClassName="avatar-skeleton-topic"
+                    /> : <img alt={topic.name} src={topic.icon} />}
                     <div className="text-content">
-                      <h2>{topic.name}</h2>
-                      <p>{topic.quizIds.length} Quizzes</p>
+                      <h2>{loading ? <Skeleton width={150}/> : topic.name}</h2>
+                      <p>{loading ? <Skeleton width={70}/> : `${topic.quizIds.length} Quizzes`}</p>
                     </div>
                   </div>
                 </Link>
                 <button id="divIconTopics" onClick={() => handleRemoveTopic(topic.name)}>
-                  <FontAwesomeIcon icon={faXmark} />
+                  {loading ? <Skeleton circle width="14px" containerClassName="avatar-skeleton"/> : <FontAwesomeIcon icon={faXmark} />}
                 </button>
               </div>
-            }
           </li>
         ))}
       </ul>
